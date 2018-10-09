@@ -10,12 +10,15 @@ export default function App(props) {
         <Router>
             <div className="app">
                 <header>
-                    <h1><Link to="/"></Link></h1>
+                    <h1><Link to="/">Link</Link></h1>
                 </header>
                 <main>
-                    <Route exact path= "/:folderId" component={EmailList} />
-                    <Route exact path= "/:folderId/:emailId" component={SingleEmail} />
-                    <Route exact path= "/" component={SingleEmail} />
+                    {/* <Route exact path= "/:folderId" component={EmailList} />
+                    <Route exact path= "/:folderId/:emailId" component={SingleEmail} /> */}
+                    <Route
+                      exact path= "/"
+                      render={() => <EmailList folderId="inbox"/>}
+                    />
                 </main>
             </div>
         </Router>

@@ -55,7 +55,7 @@ const store = createStore(state => state, initialState);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+      <Email />
     </Provider>,
     document.getElementById('root')
 );
